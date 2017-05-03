@@ -16,11 +16,13 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
+import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MainActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+//    private MapStyleOptions mapStyleOptions;
 //    private final LatLng northEast = new LatLng(36.540116, -87.359580); //used http://www.latlong.net/
 //    private final LatLng southWest = new LatLng(36.530651, -87.344517);
 
@@ -34,6 +36,9 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//        mapStyleOptions = new MapStyleOptions(Integer.toString(R.string.JSONcrap));
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -81,7 +86,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.setMinZoomPreference(17f); //takes a float value, the higher it is the closer it gets.
                                         //Seems to become pointless after 20ish I think.
         mMap.setMaxZoomPreference(17f); //More or less disabling zoom this way.
-
+        mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID); //make it a hybrid map
         // Add a marker near the apsu csci building.
         LatLng apsu = new LatLng(36.533513, -87.350696);    //Apparently Trahern instead of Maynard?
                                                             //It's close enough I guess.
