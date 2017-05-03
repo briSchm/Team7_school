@@ -15,6 +15,8 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 
 public class MainActivity extends FragmentActivity implements OnMapReadyCallback {
 
+    private GoogleMap mMap;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
