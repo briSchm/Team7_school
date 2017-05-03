@@ -90,4 +90,9 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 //        mMap.addMarker(new MarkerOptions().position(apsu).title("\"Art\" Department lol"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(apsu));
     }
+
+    void AddNewMarker(LatLng location, String title) { //To be used with the onClick.
+        mMap.clear();   //Clears the map of markers.
+        mMap.addMarker(new MarkerOptions().position(location).title(title)); //plops down a new marker.
+    }
 }
