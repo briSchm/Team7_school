@@ -6,7 +6,27 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
+import com.google.android.gms.maps.model.MapStyleOptions;
+import com.google.android.gms.maps.model.MarkerOptions;
+
+public class MainActivity extends FragmentActivity implements OnMapReadyCallback {
+
+    private GoogleMap mMap;
+//    private MapStyleOptions mapStyleOptions;
+//    private final LatLng northEast = new LatLng(36.540116, -87.359580); //used http://www.latlong.net/
+//    private final LatLng southWest = new LatLng(36.530651, -87.344517);
+
+    /***
+     *   You cannot instantiate a GoogleMap object directly, rather, you must obtain one from the
+     *   getMapAsync() method on a MapFragment or MapView that you have added to your application.
+     ***/
+
 
 
 
@@ -31,6 +51,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//        mapStyleOptions = new MapStyleOptions(Integer.toString(R.string.JSONcrap));
+
+        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
     }
 
     @Override
@@ -56,5 +83,36 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    //According to the default GoogleMap template...
+    /**
+     * Manipulates the map once available.
+     * This callback is triggered when the map is ready to be used.
+     * This is where we can add markers or lines, add listeners or move the camera. In this case,
+     * we just add a marker near Sydney, Australia.
+     * If Google Play services is not installed on the device, the user will be prompted to install
+     * it inside the SupportMapFragment. This method will only be triggered once the user has
+     * installed Google Play services and returned to the app.
+     */
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+        mMap.setMinZoomPreference(17f); //takes a float value, the higher it is the closer it gets.
+                                        //Seems to become pointless after 20ish I think.
+        mMap.setMaxZoomPreference(17f); //More or less disabling zoom this way.
+        mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID); //make it a hybrid map
+        // Add a marker near the apsu csci building.
+        LatLng apsu = new LatLng(36.533513, -87.350696);    //Apparently Trahern instead of Maynard?
+                                                            //It's close enough I guess.
+//        LatLngBounds bounds = new LatLngBounds(southWest, northEast); //Needs to be bigger than necessary.
+//        mMap.setLatLngBoundsForCameraTarget(bounds); //It's like a rand on the boundaries smh.
+//        mMap.addMarker(new MarkerOptions().position(apsu).title("\"Art\" Department lol"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(apsu));
+    }
+
+    void AddNewMarker(LatLng location, String title) { //To be used with the onClick.
+        mMap.clear();   //Clears the map of markers.
+        mMap.addMarker(new MarkerOptions().position(location).title(title)); //plops down a new marker.
     }
 }
