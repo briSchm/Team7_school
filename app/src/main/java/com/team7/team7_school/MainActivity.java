@@ -29,8 +29,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
      ***/
 
 
-
-
     //add table keys
     public static final String KEY_ROWID = "rowid";
     public static final String KEY_DEPARTMENT = "Department";
