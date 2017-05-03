@@ -15,11 +15,14 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MainActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    private final LatLng northEast = new LatLng(36.533685, -87.351705);
+    private final LatLng southWest = new LatLng(36.531840, -87.347800);
 
     /***
      *   You cannot instantiate a GoogleMap object directly, rather, you must obtain one from the
@@ -77,7 +80,9 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Add a marker near the apsu csci building.
-        LatLng apsu = new LatLng(36.533513, -87.350696);
+        LatLng apsu = new LatLng(36.533513, -87.350696);    //Papa Bless http://www.latlong.net/
+        LatLngBounds bounds = new LatLngBounds(southWest, northEast);
+        mMap.setLatLngBoundsForCameraTarget(bounds);
         mMap.addMarker(new MarkerOptions().position(apsu).title("The Useful Parts of APSU"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(apsu));
     }
