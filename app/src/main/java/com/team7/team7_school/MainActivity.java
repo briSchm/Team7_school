@@ -1,12 +1,8 @@
 package com.team7.team7_school;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -31,6 +27,25 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
      *   getMapAsync() method on a MapFragment or MapView that you have added to your application.
      ***/
 
+
+
+
+    //add table keys
+    public static final String KEY_ROWID = "rowid";
+    public static final String KEY_DEPARTMENT = "Department";
+    public static final String KEY_NAME = "Name";
+    public static final String KEY_OFFICE = "Office";
+    public static final String KEY_PHONE = "Phone";
+    public static final String KEY_EMAIL = "Email";
+    public static final String KEY_SPEC = "Specialty";
+
+
+    private static final String DATABASE_NAME = "majors.sqlite";
+    private static final int DB_VERSION = 1;
+
+    public static final String COMPUTERSCIENCE_TABLE = "Computer Science";
+    public static final String MATH_TABLE = "Math";
+    public static final String BIOLOGY_TABLE = "Biology";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
