@@ -21,8 +21,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MainActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-    private final LatLng northEast = new LatLng(36.540116, -87.359580); //used http://www.latlong.net/
-    private final LatLng southWest = new LatLng(36.530651, -87.344517);
+//    private final LatLng northEast = new LatLng(36.540116, -87.359580); //used http://www.latlong.net/
+//    private final LatLng southWest = new LatLng(36.530651, -87.344517);
 
     /***
      *   You cannot instantiate a GoogleMap object directly, rather, you must obtain one from the
