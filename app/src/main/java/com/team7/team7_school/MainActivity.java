@@ -87,7 +87,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                                                             //It's close enough I guess.
 //        LatLngBounds bounds = new LatLngBounds(southWest, northEast); //Needs to be bigger than necessary.
 //        mMap.setLatLngBoundsForCameraTarget(bounds); //It's like a rand on the boundaries smh.
-        mMap.addMarker(new MarkerOptions().position(apsu).title("The Useful Parts of APSU"));
+//        mMap.addMarker(new MarkerOptions().position(apsu).title("\"Art\" Department lol"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(apsu));
     }
 }
