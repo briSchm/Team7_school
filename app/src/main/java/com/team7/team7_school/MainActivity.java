@@ -18,6 +18,12 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
 
+    /***
+     *   You cannot instantiate a GoogleMap object directly, rather, you must obtain one from the
+     *   getMapAsync() method on a MapFragment or MapView that you have added to your application.
+     ***/
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
