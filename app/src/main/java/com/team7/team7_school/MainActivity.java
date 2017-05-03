@@ -21,8 +21,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MainActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-    private final LatLng northEast = new LatLng(36.533685, -87.351705);
-    private final LatLng southWest = new LatLng(36.531840, -87.347800);
+    private final LatLng northEast = new LatLng(36.540116, -87.359580); //used http://www.latlong.net/
+    private final LatLng southWest = new LatLng(36.530651, -87.344517);
 
     /***
      *   You cannot instantiate a GoogleMap object directly, rather, you must obtain one from the
@@ -78,11 +78,14 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        mMap.setMinZoomPreference(17f); //takes a float value, the higher it is the closer it gets.
+                                        //Seems to become pointless after 20ish I think.
+        mMap.setMaxZoomPreference(17f); //More or less disabling zoom this way.
 
         // Add a marker near the apsu csci building.
         LatLng apsu = new LatLng(36.533513, -87.350696);    //Papa Bless http://www.latlong.net/
-        LatLngBounds bounds = new LatLngBounds(southWest, northEast);
-        mMap.setLatLngBoundsForCameraTarget(bounds);
+//        LatLngBounds bounds = new LatLngBounds(southWest, northEast); //Needs to be bigger than necessary.
+//        mMap.setLatLngBoundsForCameraTarget(bounds); //It's like a rand on the boundaries smh.
         mMap.addMarker(new MarkerOptions().position(apsu).title("The Useful Parts of APSU"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(apsu));
     }
