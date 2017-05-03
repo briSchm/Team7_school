@@ -83,7 +83,8 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.setMaxZoomPreference(17f); //More or less disabling zoom this way.
 
         // Add a marker near the apsu csci building.
-        LatLng apsu = new LatLng(36.533513, -87.350696);    //Papa Bless http://www.latlong.net/
+        LatLng apsu = new LatLng(36.533513, -87.350696);    //Apparently Trahern instead of Maynard?
+                                                            //It's close enough I guess.
 //        LatLngBounds bounds = new LatLngBounds(southWest, northEast); //Needs to be bigger than necessary.
 //        mMap.setLatLngBoundsForCameraTarget(bounds); //It's like a rand on the boundaries smh.
         mMap.addMarker(new MarkerOptions().position(apsu).title("The Useful Parts of APSU"));
