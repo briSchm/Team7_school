@@ -38,7 +38,8 @@ public class MySqlLiteHelper extends SQLiteOpenHelper {
     }
 
     public enum ComputerScienceColumn {
-        Building_ID, Department, Name, Office, Phone, Email;
+        computerscience_Department, computerscience_Name, computerscience_Office,
+        computerscience_Phone, computerscience_Email;
 
         public static String[] names() {
             ComputerScienceColumn[] v = values();
@@ -51,7 +52,8 @@ public class MySqlLiteHelper extends SQLiteOpenHelper {
     }
 
     public enum BiologyColumn {
-        Building_ID, Department, Name, Office, Phone, Email;
+        biology_Department, biology_Name, biology_Office,
+        biology_Phone, biology_Email;
 
         public static String[] names() {
             BiologyColumn[] v = values();
@@ -64,7 +66,8 @@ public class MySqlLiteHelper extends SQLiteOpenHelper {
     }
 
     public enum MathColumn {
-        Building_ID, Department, Name, Office, Phone, Email, Spec;
+        math_Department, math_Name, math_Office,
+        math_Phone, math_Email, math_Spec;
 
         public static String[] names() {
            MathColumn[] v = values();

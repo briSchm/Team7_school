@@ -1,67 +1,59 @@
 package com.team7.team7_school;
 
 public class ComputerScience {
-    private int Building_ID;
-    private String Department;
-    private String Name;
-    private String Office;
-    private String Phone;
-    private String Email;
+    private String computerscience_Department;
+    private String computerscience_Name;
+    private String computerscience_Office;
+    private String computerscience_Phone;
+    private String computerscience_Email;
 
-    ComputerScience() {
+
+   ComputerScience() {
 
     }
 
-    public int getBuilding_ID() {
-        return Building_ID;
+    public String getComputerscience_Department() {
+        return computerscience_Department;
     }
 
-    public void setBuilding_ID(int Building_ID) {
-        this.Building_ID = Building_ID;
+    public void setComputerscience_Department(String computerscience_Department) {
+        this.computerscience_Department = computerscience_Department;
     }
 
-    public String getDepartment() {
-        return Department;
+    public String getComputerscience_Name() {
+        return computerscience_Name;
     }
 
-    public void setDepartment(String Department) {
-        this.Department = Department;
+    public void setComputerscience_Name(String computerscience_Name) {
+        this.computerscience_Name = computerscience_Name;
     }
 
-    public String getName() {
-        return Name;
+    public String getComputerscience_Office() {
+        return computerscience_Office;
     }
 
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setComputerscience_Office(String computerscience_Office) {
+        this.computerscience_Office = computerscience_Office;
     }
 
-    public String getOffice() {
-        return Office;
+    public String getComputerscience_Phone() {
+        return computerscience_Phone;
     }
 
-    public void setOffice(String Office) {
-        this.Office = Office;
+    public void setComputerscience_Phone(String computerscience_Phone) {
+        this.computerscience_Phone = computerscience_Phone;
     }
 
-    public String getPhone() {
-        return Phone;
+    public String getComputerscience_Email() {
+        return computerscience_Email;
     }
 
-    public void setPhone(String Phone) {
-        this.Phone = Phone;
-    }
-
-    public String getEmail() {
-        return Email;
-    }
-
-    public void setEmail(String Email) {
-        this.Email = Email;
+    public void setComputerscience_Email(String computerscience_Email) {
+        this.computerscience_Email = computerscience_Email;
     }
 
     @Override
     public String toString() {
-        return Name;
+        return computerscience_Name;
     }
 }

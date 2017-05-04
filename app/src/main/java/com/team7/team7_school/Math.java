@@ -1,76 +1,68 @@
 package com.team7.team7_school;
 
 public class Math {
-    private int Building_ID;
-    private String Department;
-    private String Name;
-    private String Office;
-    private String Phone;
-    private String Email;
-    private String Spec;
+    private String math_Department;
+    private String math_Name;
+    private String math_Office;
+    private String math_Phone;
+    private String math_Email;
+    private String math_Spec;
+
 
     Math() {
 
     }
 
-    public int getBuilding_ID() {
-        return Building_ID;
+    public String getMath_Department() {
+        return math_Department;
     }
 
-    public void setBuilding_ID(int Building_ID) {
-        this.Building_ID = Building_ID;
+    public void setMath_Department(String math_Department) {
+        this.math_Department = math_Department;
     }
 
-    public String getDepartment() {
-        return Department;
+    public String getMath_Name() {
+        return math_Name;
     }
 
-    public void setDepartment(String Department) {
-        this.Department = Department;
+    public void setMath_Name(String math_Name) {
+        this.math_Name = math_Name;
     }
 
-    public String getName() {
-        return Name;
+    public String getMath_Office() {
+        return math_Office;
     }
 
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setMath_Office(String math_Office) {
+        this.math_Office = math_Office;
     }
 
-    public String getOffice() {
-        return Office;
+    public String getMath_Phone() {
+        return math_Phone;
     }
 
-    public void setOffice(String Office) {
-        this.Office = Office;
+    public void setMath_Phone(String math_Phone) {
+        this.math_Phone = math_Phone;
     }
 
-    public String getPhone() {
-        return Phone;
+    public String getMath_Email() {
+        return math_Email;
     }
 
-    public void setPhone(String Phone) {
-        this.Phone = Phone;
+    public void setMath_Email(String math_Email) {
+        this.math_Email = math_Email;
     }
 
-    public String getEmail() {
-        return Email;
+    public String getMath_Spec() {
+        return math_Spec;
     }
 
-    public void setEmail(String Email) {
-        this.Email = Email;
-    }
-
-    public String getSpec() {
-        return Spec;
-    }
-
-    public void setSpec(String Spec) {
-        this.Spec = Spec;
+    public void setMath_Spec(String math_Spec) {
+        this.math_Spec = math_Spec;
     }
 
     @Override
     public String toString() {
-        return Name;
+        return math_Name;
     }
 }

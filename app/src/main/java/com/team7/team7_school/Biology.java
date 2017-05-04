@@ -1,67 +1,59 @@
 package com.team7.team7_school;
 
 public class Biology {
-    private int Building_ID;
-    private String Department;
-    private String Name;
-    private String Office;
-    private String Phone;
-    private String Email;
+    private String biology_Department;
+    private String biology_Name;
+    private String biology_Office;
+    private String biology_Phone;
+    private String biology_Email;
+
 
     Biology() {
 
     }
 
-    public int getBuilding_ID() {
-        return Building_ID;
+    public String getBiology_Department() {
+        return biology_Department;
     }
 
-    public void setBuilding_ID(int Building_ID) {
-        this.Building_ID = Building_ID;
+    public void setBiology_Department(String biology_Department) {
+        this.biology_Department = biology_Department;
     }
 
-    public String getDepartment() {
-        return Department;
+    public String getBiology_Name() {
+        return biology_Name;
     }
 
-    public void setDepartment(String Department) {
-        this.Department = Department;
+    public void setBiology_Name(String biology_Name) {
+        this.biology_Name = biology_Name;
     }
 
-    public String getName() {
-        return Name;
+    public String getBiology_Office() {
+        return biology_Office;
     }
 
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setBiology_Office(String biology_Office) {
+        this.biology_Office = biology_Office;
     }
 
-    public String getOffice() {
-        return Office;
+    public String getBiology_Phone() {
+        return biology_Phone;
     }
 
-    public void setOffice(String Office) {
-        this.Office = Office;
+    public void setBiology_Phone(String biology_Phone) {
+        this.biology_Phone = biology_Phone;
     }
 
-    public String getPhone() {
-        return Phone;
+    public String getBiology_Email() {
+        return biology_Email;
     }
 
-    public void setPhone(String Phone) {
-        this.Phone = Phone;
-    }
-
-    public String getEmail() {
-        return Email;
-    }
-
-    public void setEmail(String Email) {
-        this.Email = Email;
+    public void setBiology_Email(String biology_Email) {
+        this.biology_Email = biology_Email;
     }
 
     @Override
     public String toString() {
-        return Name;
+        return biology_Name;
     }
 }
