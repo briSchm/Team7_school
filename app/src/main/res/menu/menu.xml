@@ -3,9 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/financeaid"
-        android:title="Financial Aid" />
-    <item
         android:id="@+id/about"
         android:title="About" />
+    <item
+        android:id="@+id/com"
+        android:title="Computer Science" />
 </menu>
