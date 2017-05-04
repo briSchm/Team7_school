@@ -67,18 +67,24 @@ import java.util.List;
             mMap.setMaxZoomPreference(17f); //More or less disabling zoom this way.
             mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID); //make it a hybrid map
             // Add a marker near the apsu csci building.
-            LatLng apsu = new LatLng(36.533513, -87.350696);    //Apparently Trahern instead of Maynard?
-            //It's close enough I guess.
+            LatLng apsu = new LatLng(36.533513, -87.350696);    //Apparently Trahern instead of Maynard? //It's close enough I guess.
+            LatLng csci = new LatLng(36.533308, -87.349807);
+            LatLng science = new LatLng(36.532963, -87.350775);
+
 //        LatLngBounds bounds = new LatLngBounds(southWest, northEast); //Needs to be bigger than necessary.
 //        mMap.setLatLngBoundsForCameraTarget(bounds); //It's like a rand on the boundaries smh.
-//        mMap.addMarker(new MarkerOptions().position(apsu).title("\"Art\" Department lol"));
+            mMap.addMarker(new MarkerOptions().position(apsu).title("Trahern: \"Art\" Department lol"));
+            mMap.addMarker(new MarkerOptions().position(csci).title("Maynard: Math and CSCI"));
+            mMap.addMarker(new MarkerOptions().position(science).title("SunnyD: Actual Science Building"));
+
             mMap.moveCamera(CameraUpdateFactory.newLatLng(apsu));
         }
 
-        void AddNewMarker(LatLng location, String title) { //To be used with the onClick.
-            mMap.clear();   //Clears the map of markers.
-            mMap.addMarker(new MarkerOptions().position(location).title(title)); //plops down a new marker.
-        }
+//        //Search function didn't pan out.
+//        void AddNewMarker(LatLng location, String title) { //To be used with the onClick.
+//            mMap.clear();   //Clears the map of markers.
+//            mMap.addMarker(new MarkerOptions().position(location).title(title)); //plops down a new marker.
+//        }
 
         @Override
     public boolean onCreateOptionsMenu(Menu menu) {
