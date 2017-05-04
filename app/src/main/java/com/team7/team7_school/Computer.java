@@ -52,7 +52,7 @@ public class Computer extends ListActivity {
                 "<p><b>Phone: </b> " + computerscience.getComputerscience_Phone() + "</p>" +
                 "<p><b>Email </b> " + computerscience.getComputerscience_Email() + "</p>" +
                 "</html>")).
-                setTitle("City Info").
+                setTitle("Professor Info").
                 setPositiveButton("OK", null);
         builder.create().show();
     }
